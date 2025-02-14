@@ -15,9 +15,9 @@ def typeBasedTransformer(**Alex):
             if len(set(value.values())) == len(value.values()):
                 print(f"{name}: {{ {', '.join(f'{v}: {k}' for k, v in value.items())} }}")
             else:
-                print(f"{name}: {value}")  # Leave unchanged if values are not unique
+                print(f"{name}: {value}") 
         else:
-            print(f"{name}: {value}")  # Leave unchanged if unsupported type
+            print(f"{name}: {value}") 
 
 
 # typeBasedTransformer(name="Asilbek", age=19, city="Tashkent", occupation="Student", electricity = True, heights = [178, 183, 190])
