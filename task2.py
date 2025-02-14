@@ -3,10 +3,11 @@
 
 def typeBasedTransformer(**Alex):
     for name, value in Alex.items():
-        if isinstance(value, (int, float)):  ##I used isinstance becuase using type() function doesnt allow me to check two types at once.
+        if isinstance(value, (int, float)):  #I used isinstance becuase using type() function doesnt allow me to check two types  once.
+            print(f"{name}: {value ** 2}")
         elif isinstance(value, str):          
-            print(f"{name}: {value[::-1]}") 
-        elif isinstance(value, bool): 
+            print(f"{name}: {value[::-1]}")
+        elif isinstance(value, bool):
             print(f"{name}: {not value}")
         elif isinstance(value, (list, tuple)):
             print(f"{name}: {value[::-1]}")
@@ -19,4 +20,4 @@ def typeBasedTransformer(**Alex):
             print(f"{name}: {value}")  # Leave unchanged if unsupported type
 
 
-# typeBasedTransformer(name="Asilbek", age=19, city="Tashkent", occupation="Student")  #
+# typeBasedTransformer(name="Asilbek", age=19, city="Tashkent", occupation="Student", electricity = True, heights = [178, 183, 190])
