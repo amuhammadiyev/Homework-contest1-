@@ -1,23 +1,18 @@
 
-#well we should use some built-in function to check the data type of entered value or information.
-
 def typeBasedTransformer(**Alex):
     for name, value in Alex.items():
-        if isinstance(value, (int, float)):  #I used isinstance becuase using type() function doesnt allow me to check two types  once.
+        if type(value) == int or type(value) == float:
             print(f"{name}: {value ** 2}")
-        elif isinstance(value, str):          
+        elif type(value) == str:
             print(f"{name}: {value[::-1]}")
-        elif isinstance(value, bool):
+        elif type(value) == bool:
             print(f"{name}: {not value}")
-        elif isinstance(value, (list, tuple)):
+        elif type(value) == list or type(value) == tuple:
             print(f"{name}: {value[::-1]}")
-        elif isinstance(value, dict):
-            if len(set(value.values())) == len(value.values()):
-                print(f"{name}: {{ {', '.join(f'{v}: {k}' for k, v in value.items())} }}")
-            else:
-                print(f"{name}: {value}") 
+        elif type(value) == dict:
+            reversed_dict = {}
+            for k, v in value.items():
+                reversed_dict[v] = k
+            print(reversed_dict)
         else:
             print(f"{name}: {value}") 
-
-
-# typeBasedTransformer(name="Asilbek", age=19, city="Tashkent", occupation="Student", electricity = True, heights = [178, 183, 190])
