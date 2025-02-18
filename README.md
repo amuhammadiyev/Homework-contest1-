@@ -1,6 +1,6 @@
 # Homework-contest1-
 
-Task1(This task made by Husan Saydazimov)
+Task1(This task made by myself(Asilbek Muhammadiyev))
 this task required some research on how to use the function which works with double star symbol “**”, preceding an argument. However it was done quite normal and tested the result sucessfully. 
 
 Task2(This task made by myself(Asilbek Muhammadiyev))
